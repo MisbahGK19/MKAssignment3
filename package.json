@@ -11,9 +11,17 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "index.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Misbah Kotwal",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MisbahGK19/MKAssignment3.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MisbahGK19/MKAssignment3/issues"
+  },
+  "homepage": "https://github.com/MisbahGK19/MKAssignment3#readme"
 }
