@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url("../images/background.jpg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+header h1{
+    font-family: 'Arial black';
+    font-size: 50px;
+    color: rgb(245, 122, 51);
+    font-weight: bolder;
+    background-color:rgba(17, 17, 17, 0.7);
+    text-shadow: 5px 4px 5px rgb(51, 51, 51);
+    padding: 10px;
+    height: 70px;
+}
+header h2{
+    font-family: 'Arial black';
+    font-size: 30px;
+    color: rgb(245, 122, 51);
+    font-weight: bolder;
+    background-color:rgba(0, 0, 0, 0.5);
+    text-shadow: 5px 4px 5px rgb(5, 5, 5);
+    padding: 10px;
+    margin-top: 10px;
+}
+header img{
+    float: left;
+    padding: 10px;
+    margin-left: 17%;
+    margin-top: 25px;
+}
+form{
+    margin-top: 20px;
+    padding-right: 0.5em;
+    background-color:rgba(248, 191, 86, 0.7);
+    border-radius: 20px;
+}
+form h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+    font-style: italic;
+    color: rgb(83, 1, 1);
+    margin-left: 25%;
+    padding: 5px;
+    align-content: center;
+    margin-bottom: 0;
+}
+aside{
+    float: left;
+    width: 600px;
+    background-color:rgba(248, 191, 86, 0.7);
+    margin-top: 15%;
+    margin-left: 5px;
+}
+section{
+    float: right ;
+    width: 600px;
+    background-color:rgba(248, 191, 86, 0.7);
+}
+.errors{
+    font-size: 18px;
+    color: red;
+    display: block;
+    background-color: rgb(255, 234, 208);
+    margin: 5px;
+    font-weight: bolder;
+    display: block;
+}
+label{
+    width: 170px;
+    font-size: 20px;
+    font-weight: bolder;
+    display: inline-block;
+    margin-left: 10%;
+    padding: 10px;
+    font-family: 'Segoe UI';
+}
+.required{
+    color: red;
+}
+input{
+    width: 300px;
+    font-size: 18px;
+    color: rgb(53, 52, 52);
+}
+select, select option{
+    width: 310px;
+    font-size: 18px;
+    color: rgb(53, 52, 52);
+}
+input[type=submit]{
+    float: right;
+    margin-top: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-family: 'Segoe UI';
+    font-weight: bolder; 
+    font-size: 20px;  
+    border-radius: 30px;
+    border-color: rgb(5, 5, 5);
+    background-color: rgb(3, 214, 3);
+}
+.products{
+    margin-top: 10px;
+    float: right;
+    width: 600px;
+    margin-right: 10%;
+    background-color:rgba(248, 191, 86, 0.7);
+}
+.item{
+    float: left;
+    width: 270px;
+    display: block;
+    padding: 3px;
+    margin: 10px;
+    border: 2px solid black;
+}
+.item img{
+    margin-left: 50px;
+}
+.item p{
+    font-size: 18px;
+    padding: 5px;
+    font-weight: bold;
+    margin: 5px;
+}
+.item input{
+    width: 70px;
+    height: 25instpx;
+    font-size: 18px;
+    margin: 10px;
+    border: 2px solid black;
+    float: left;
+}

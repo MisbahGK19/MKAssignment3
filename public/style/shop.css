@@ -1,0 +1,82 @@
+/* Reset Selector */
+*{
+    margin: 0;
+    padding: 0;
+}
+/* styling for the header */
+header h1{
+    font-family: 'Arial black';
+    font-size: 50px;
+    color: rgb(245, 122, 51);
+    font-weight: bolder;
+    background-color:rgba(17, 17, 17, 0.7);
+    text-shadow: 5px 4px 5px rgb(51, 51, 51);
+    padding: 10px;
+    height: 70px;
+    margin-top: 10px;
+}
+header h2{
+    font-family: 'Arial black';
+    font-size: 30px;
+    color: rgb(245, 122, 51);
+    font-weight: bolder;
+    background-color:rgba(0, 0, 0, 0.5);
+    text-shadow: 5px 4px 5px rgb(5, 5, 5);
+    padding: 10px;
+    margin-top: 10px;
+}
+header img{
+    float: left;
+    padding: 10px;
+    margin-left: 17%;
+    margin-top: 25px;
+}
+h3{
+    margin-top: 10px;
+    font-size: 23px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    padding: 0.5em;
+    display: block;
+    float: left;
+    color: rgb(245, 122, 51);;
+    background-color:rgba(17, 17, 17, 0.7); ;
+}
+/* styling for the table */
+table{
+    border: 2px solid black;
+    font-size: 20px;
+    margin: auto;
+    padding: auto;
+    margin-top: 20px;
+}
+/* styling for the table fields */
+#field{
+    width: 200px;
+    margin: 5px;
+    padding: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: 2px solid black;
+}
+td{
+    width: 350px;
+    border: 2px solid black;
+    padding: 3px;
+    font-size: 18px;
+}
+/* styling the aside table and setting it to float */
+aside{
+    float: left;
+    margin-left: 30px;
+}
+/* styling the section table and setting it to float */
+section{
+    float: right;
+    width: 650px;
+    margin-right: 30px;
+}
+section td{
+    font-size: 18px;
+    font-weight: bold;
+    padding: 4px;
+}

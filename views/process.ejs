@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- linking the css file -->
+    <link rel="stylesheet" href="../style/shop.css">
+    <title>Shopping Page</title>
+</head>
+<body>
+    <!-- creating the mains -->
+    <main class="bill">
+    <header>
+        <!-- image in the header -->
+        <img src="../images/logo1.jpg" alt="Logo" width="100px">
+        <!-- Heading for the webpage -->
+        <h1>IC Shopping Center </h1>
+         <!-- Sub_heading for the webpage -->
+        <h2>The Best Sunglass Store</h2>
+        <h3>Bill</h3>
+    </header>
+    <aside>   
+         <!--table to display the input customer information  -->
+        <table>
+            <!-- row to display Customer Name -->
+        <tr>
+            <td id="field">Full Name</td>
+            <td><%= pageData.resultName %></td>
+        </tr>
+            <!-- row to display Customer Address -->
+        <tr>
+            <td id="field">Address</td>
+            <td><%= pageData.resultAddress %></td>
+        </tr>
+            <!-- row to display Customer City -->
+        <tr>
+            <td id="field">City</td>
+            <td><%= pageData.resultCity %></td>
+        </tr>
+            <!-- row to display Customer Province -->
+        <tr>
+            <td id="field">Province</td>
+            <td><%= pageData.resultProvince %></td>
+        </tr>
+            <!-- row to display Customer Phone Number -->
+        <tr>
+            <td id="field">Phone Number</td>
+            <td><%= pageData.resultPhone %></td>
+        </tr>
+            <!-- row to display Customer Email -->
+        <tr>
+            <td id="field">Email</td>
+            <td><%= pageData.resultEmail %></td>
+        </tr>
+    </table>
+    </aside>
+    <section>
+        <!-- Table to display the Billed product and the total -->
+    <table id="result">
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Unit Price</th>
+            <th>Price</th>
+        </tr>
+        <!-- row to display the purchased product, quanityt and the total -->
+        <% for( var item of resultData) { %>
+        <tr>
+            <% if(item.productQuantity > 0) { %>
+              <td><%= item.productName %> Glasses</td>
+              <td><%= item.productQuantity %></td>
+              <td><%= `$${parseFloat(item.productPrice).toFixed(2)}` %></td>
+              <td ><%= `$${parseFloat(item.productPrice * item.productQuantity).toFixed(2)}` %></td>
+            <% } %>
+          </tr>
+        <% } %>
+        <!-- row to display the subtotal of the products -->
+        <tr>
+            <td colspan="3">Sub-Total</td>
+            <td><b><%= `$${parseFloat(pageData.resultSubTotal).toFixed(2)}`%></b></td>
+        </tr>
+        <!-- row to display the tax amount of the product according to province -->
+        <tr>
+            <td colspan="3"><%= `Tax (${pageData.resultTax * 100}%)` %></td>
+            <td><b><%= `$${parseFloat(pageData.resultTaxAmount).toFixed(2)}`%></b></td>
+        </tr>
+        <!-- row to display the Bill total amount -->
+        <tr>
+            <td colspan="3">Total</td>
+            <td><b><%= `$${parseFloat(pageData.resultTotal).toFixed(2)}` %></b> </td>
+        </tr>
+    </table>
+    </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- linked the css file -->
+    <link rel="stylesheet" href="../style/main.css">
+    <title>Home Page</title>
+</head>
+<body>
+    <header>
+        <!-- image in the header -->
+        <img src="../images/logo1.jpg" alt="Logo" width="100px">
+        <!-- header for the webpage -->
+        <h1>IC Shopping Center </h1>
+        <!-- sub-header for the webpage -->
+        <h2>The Best Sunglass Store</h2>
+    </header>
+    <!-- Form to process information -->
+    <form action="bill" method="POST">
+        <aside>
+            <!-- heading for the form -->
+        <h2>Registration and Shop with us!</h2>
+        <!-- Error message display -->
+        <%
+        if(typeof(errors) != 'undefined'){
+            for(var error of errors){
+                %>
+                <p class="errors"><%= error.msg %></p>
+                <%
+            }
+            } 
+        %>
+        <!-- division for the customer name field -->
+        <div class="customerName">
+            <label for="fullName">Full Name<span class="required">*</span></label>
+            <input type="text" name="fullName" id="fullName" placeholder="FirstName LastName">
+        </div>
+        <!-- division for the customer address field -->
+        <div class="customerAddress">
+            <label for="address">Address<span class="required">*</span></label>
+            <input type="text" name="address" id="address" placeholder="22 Lester Street">
+        </div>
+        <!-- division for the customer city field -->
+        <div class="customerCity">
+            <label for="city">City<span class="required">*</span></label>
+            <input type="text" name="city" id="city" placeholder="Toronto">
+        </div>
+        <!-- division for the customer Province field -->
+        <div class="customerProvince">
+            <label for="province">Province<span class="required">*</span></label>
+        <select id="province" name="province">
+            <option value="blank">Select Province</option>
+            <option value="AB">Alberta</option>
+            <option value="BC">British Columbia</option>
+            <option value="MB">Manitoba</option>
+            <option value="NB">New Brunswick</option>
+            <option value="NS">Nova Scotia</option>
+            <option value="NL">Newfoundland and Labrador</option>
+            <option value="NT">Northwest Territories</option>
+            <option value="NU">Nunavut</option>
+            <option value="ON">Ontario</option>
+            <option value="PE">Prince Edward Island</option>
+            <option value="QC">Quebec</option>
+            <option value="SK">Saskatchewan</option>
+            <option value="YT">Yukon</option>
+        </select>  
+        </div>
+        <!-- division for customer phone number field -->
+        <div class="customerPhoneNo">
+            <label for="phone">Phone Number<span class="required">*</span></label>
+            <input type="text" name="phone" id="phone" placeholder="1231231234">
+        </div>
+        <!-- division for customer email field -->
+        <div class="customerEmail">
+            <label for="email">Email Address<span class="required">*</span></label>
+            <input type="text" name="email" id="email" placeholder="test@test.com">
+        </div>
+    </aside>
+    <!-- Input button to submit the form -->
+    <input type="submit" value="Proceed">
+    <section class="products">
+    <!--Display the Product purchase errors-->
+        <% if (typeof(productError) != 'undefined') { %>
+            <p class="errors"> <%= productError %> </p>
+        <% } %>  
+        <p id="error"></p>
+    <!-- display the items for sale -->
+        <% for( var item of items) { %>
+            <div class="item">
+                <img src="images/<%= item.name %>.jpg" height="150">
+                <p><%= item.name %> Glasses<br><%= `$${item.price}` %></p>
+                <input type="text" name="<%= item.input_Id %>" id="<%= item.input_Id %>" value="<%= item.quantity %>">
+            </div>
+        <% } %>
+    </section>
+    </form>
+</body>
+</html>
