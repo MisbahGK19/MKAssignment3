@@ -2,6 +2,7 @@
 const express = require('express');
 const path = require('path');
 // set up variables to use packages
+const port = process.env.PORT || 8080
 var myApp = express();
 myApp.use(express.urlencoded({extended:false})); 
 
@@ -221,7 +222,7 @@ myApp.post('/bill', [
     }
 });
 //connecting to the port 8080
-myApp.listen(8080);
+myApp.listen(port);
 
 //checking if everything works fine
 console.log('Everything executed fine.. website at port 8080....');
